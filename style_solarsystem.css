@@ -1,0 +1,476 @@
+/*---------------------SOLAR SYSTEM CATEGORY-------------------------------*/
+
+/*----------Presentation-System----------*/
+#system-name h1, p{
+    margin : 5px;
+}
+
+/*----------System-elements----------*/
+/*Systemes&sous-systemes*/
+.system-elements{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subplanets{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Options-Element*/
+.system-element-option{
+    z-index: 2;
+    opacity: 0;
+    position: absolute;
+    left: 70%;
+    top:70%;
+    max-width: max-content;
+    max-height: max-content;
+    transition: 0.2s linear;
+}
+
+.system-element:hover .system-element-option{
+    opacity: 1;
+    left: 85%;
+    top:85%;
+}
+
+.system-element:hover .subplanets .system-element-option{
+    opacity: 0;
+    left: 50%;
+    top:50%;
+    transform: scale(0.5);
+}
+
+.system-element .subplanets .system-element:hover .system-element-option{
+    opacity: 1;
+    left: 70%;
+    top:70%;
+}
+
+.system-element-option-button{
+    font-size: 10px;
+    height: 20px;
+    width: 10px;
+    border-radius: 50%;
+}
+
+.system-element-option-add{
+    background-color: gray;
+}
+
+.system-element-option-remove{
+    background-color: red;
+    color: white;
+}
+
+/*Corps du system*/
+.system-element{
+    z-index: 1;
+    position: relative;
+    transition: 0.4s all 0.2s linear;
+}
+
+.system-element:hover{
+    transform: scale(1.5);
+    transition: 0.5s transform cubic-bezier( 0.07, 0.62, 0.45, 0.93 ) ;
+}
+
+.system-element h2 {
+    opacity: 0;
+    position: absolute;
+    width: max-content;
+    margin: 3px;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    transition: 0.5s all;
+}
+
+.subplanets h4{
+    margin: 0;
+    margin-left: 5px;
+    font-size: 10px;
+    position: absolute;
+    left: 100%;
+    bottom: 25%;
+    opacity: 0;
+}
+
+.system-element:hover h2{
+    opacity: 1;
+}
+
+.system-element:hover .subplanets h4{
+    opacity: 0;
+}
+
+.system-element .subplanets .system-element:hover h4{
+    opacity: 1;
+}
+
+.star{
+    height: 300px;
+    width: 300px;
+    background: url(img/sun.png) no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.asteroid{
+    height: 170px;
+    width: 40px;
+    background: grey;
+    border-radius: 30px;
+}
+/*planete*/
+.planet-big{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background: url(img/planet.png) no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.planet-medium{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    background: url(img/planet.png) no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.planet-small{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background: url(img/planet.png) no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+#Galor{
+    background: url(img/planet2.png) no-repeat;
+    background-size: cover;
+}
+
+/*subplanete*/
+.moon{
+    height: 30px;
+    width: 30px;
+    background: lightskyblue;
+    background: url(img/moon.png) no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+}
+
+.station{
+    height: 30px;
+    width: 30px;
+    background: url(img/station.png) no-repeat;
+    background-size: contain;
+    outline: solid lightgrey 3px;
+}
+
+/*Liens*/
+.system-element-link{
+    height: 10px;
+    width: 80px;
+    background: lightblue;
+    opacity: 0.6;
+    transition: 0.5s all cubic-bezier( 0.07, 0.62, 0.45, 0.93 ) ;
+    animation: linkCreation 0.5s forwards;
+}
+
+.system-element-subplanet-link {
+    height: 20px;
+    width: 5px;
+    background: lightblue;
+    opacity: 0.6;
+    transition: 0.5s all cubic-bezier( 0.07, 0.62, 0.45, 0.93 ) ;
+    animation: linkCreation 0.5s forwards;
+}
+
+/*----------MANAGEMENT----------*/
+.management{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: 5px;
+    bottom: 5px;
+}
+
+.management-form{
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    background: dimgray;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.2s linear;
+}
+
+.management-form-input{
+    margin: 2px;
+    border-radius: 5px;
+    color: black;
+}
+
+.management-add{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 50%;
+    background: dimgrey;
+    transition: 1s transform cubic-bezier( 0.1, 0.62, 0.01, 1 );
+}
+
+/*----------SUBMANAGEMENT-----------*/
+.system-element-option-addsubplanet{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.submanagement-form{
+    margin-left: 5px;
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+    flex-direction: column;
+    background: dimgray;
+    border-radius: 5px;
+    padding: 5px;
+    transition: all 0.2s linear;
+}
+
+/*----------WEB----------*/
+#btnaddplanetfromweb{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    border-radius: 50%;
+    background: url(img/wwwiconget.png) no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+}
+
+#btnsendplanettoweb{
+    position: absolute;
+    right: 90px;
+    top: 30px;
+    border-radius: 50%;
+    background: url(img/wwwiconsend.png) no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+}
+
+/*----------Element-section----------*/
+.element-section{
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+    margin: 20px;
+    padding: 10px;
+}
+
+.element-infos{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: max-content max-content max-content max-content;
+}
+
+/*Element-infos*/
+.element-name{
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    height: 100%;
+    margin: 0;
+    font-size: 50px;
+}
+
+.element-description{
+    grid-column: 1;
+    grid-row: 2;
+    height: max-content;
+    margin: 10px;
+}
+
+.element-specs{
+    grid-column: 1;
+    grid-row: 3;
+    height : max-content;
+    margin: 10px;
+    list-style: none;
+}
+
+.element-spec{
+    display: flex;
+    align-items: center;
+}
+
+.element-spec-icon{
+    margin: 10px;
+    height: 40px;
+    width: 40px;
+}
+
+/*Element-img*/
+.element-img{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2;
+    grid-row: 2 / span 2;
+    margin: 0;
+}
+
+.element-img img{
+    max-width: 50%;
+}
+
+/*Back-system*/
+.back-system{
+    width: max-content;
+    grid-column: 1 / span 2;
+    grid-row: 4;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    margin: 0;
+}
+
+.arrow-icon{
+    margin: 10px;
+    height: 40px;
+    width: 40px;
+    animation: rotation 25s linear infinite;
+}
+
+.arrow-icon:hover{
+    animation: rotation 1s linear infinite;
+}
+
+.back-system p{
+    margin: 0;
+}
+
+.back-system:hover{
+    color: orange;
+}
+
+/*----------Animation----------*/
+@keyframes linkCreation{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+@keyframes rotation{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/*----------JS-effect----------*/
+.management-form-show{
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.submanagement-form-show{
+    opacity: 1;
+    display: flex;
+    pointer-events: initial;
+}
+
+.turn45{
+    transform: rotate(45deg);
+}
+
+.element-section-show{
+    opacity: 1;
+    pointer-events: initial;
+    display: block;
+}
+
+.system-hide{
+    display: none;
+}
+
+.option-button-show{
+    pointer-events: initial;
+    display: block;
+}
+
+/*----------Responsive----------*/
+@media screen and (max-width: 1015px){
+    .system-elements{
+        flex-direction: column;
+    }
+
+    .subplanets h4{
+        bottom: 100%;
+        left: 35%;
+        transform: translate(-50%);
+    }
+
+    .system-element-link{
+        height: 80px;
+        width: 10px;
+    }
+
+    .system-element-subplanet-link {
+        height: 5px;
+        width: 20px;
+    }
+
+    .subplanets{
+        top: 50%;
+        left: 100%;
+        transform: translate(0%);
+        transform: translateY(-50%);
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .asteroid{
+        height: 40px;
+        width: 170px;
+    }
+
+    .management{
+        flex-direction: row-reverse;
+        right: inherit;
+        left: 5px;
+        bottom: 100px;
+    }
+
+    .element-infos{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content max-content;
+    }
+
+    .element-img{
+        grid-column: 1;
+        grid-row: 4;
+    }
+}

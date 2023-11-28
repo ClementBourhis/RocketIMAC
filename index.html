@@ -1,0 +1,530 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Rocket'IMAC Build your rocket !</title>
+        <link href="style.css" rel="stylesheet"/>
+        <link href="style_solarsystem.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="normalize.css">
+        <link href="Roboto-Black.ttf" rel="stylesheet">
+    </head>
+    <body>
+        <section id='entete'>
+            <div class='entete-fixed'>
+                <form id='entete-bienvenue' class='entete-form'>
+                    <h1 id='entete-bienvenue-title' class='entete-title'>Bienvenue sur Rocket'IMAC</h1>
+                </form>
+
+                <form id='entete-spacex' class='entete-spacex entete-form'>
+                    <img id="entete-spacex-img" src="img/SpaceX-Logo.png" alt="SpaceX-Logo">
+                </form>
+
+                <form id='entete-rocket' class='entete-rocket entete-form'>
+                    <h1 class="entete-rocket-name"></h1>
+                </form>
+
+                <form id="system-name" class='entete-solarsystem entete-form'>
+                    <h1 >Gemany-Stella</h1>
+                    <p class="solar-instruction">Selectionne ta destination !</p>
+                </form>
+
+                <form id='entete-congratulation' class='entete-congratulation entete-form'>
+                    <h1 class="entete-congratulation-title"></h1>
+                 </form>
+            </div>
+        </section>
+
+        <section id='menu'>
+            <div id='menuquestion' class='menu-question'>
+                <h2 class='menu-question-title'>Es-tu prêt à créer ta propre fusée ?</h2>
+                <div class='menu-question-choix'>
+                    <button class="menu-question-choix-button menu-question-choix-oui">Let's go</button>
+                    <button class="menu-question-choix-button menu-question-choix-non">Nop</button>
+                </div>
+            </div>
+
+            <div id='reponse-non' class='menu-reponse'>
+                <h2 id="menu-question-title-non" class='menu-question-title'>?</h2>
+                <div class='menu-question-choix'>
+                    <button class="menu-question-choix-button menu-question-choix-oui">Bon d'accord...</button>
+                    <button class="menu-question-choix-button menu-question-choix-non">oui oui</button>
+                </div>
+                <div class="terminal">
+                    <div class="terminalbotimac">
+                        <img src='img/botimac.png' alt='botimac.png'>
+                    </div>
+                    <div class='terminaldialog'></div>
+                    <div class='terminal-gift'>
+                        <a class="gift" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                            <img src='img/gifticon.png' alt='Gift.png'>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id='reponse-oui' class='menu-reponse'>
+                <h2 class='menu-question-title'>Super ! Comment vas-tu l'appeler ?</h2>
+                <div class='menu-question-choix'>
+                    <input id="menu-question-name" class="menu-question-input" type="text" placeholder="Name your rocket">
+                </div>
+                <div class='menu-question-choix'>
+                    <button class="menu-question-bless">
+                    <p>Batiser</p>
+                    </button>
+                </div>
+            </div>
+
+            <button class="button-spacex">
+                <img class="button-spacex-img" src="img/SpaceX-Logo.png" alt="SpaceX-Logo">
+            </button>
+        </section>
+
+        <section id='spacex' class='spacex'>
+            <div class="spacexelement-selection">
+                <h1>Bienvenue aux archives SpaceX sur quoi veux-tu te renseigner ?</h1>
+                <div class="spacexelement-selection-back">
+                    <button class='spacexelement-selection-backbutton'>
+                        <p>Retour</p>
+                    </button>
+                </div>
+                <button class="spacexelement-selection-button spacexelement-selection-capsules">
+                    <img class='spacexelement-selection-button-img' src='img/capsuleicon.png' alt="capsule">
+                </button>
+                <button class="spacexelement-selection-button spacexelement-selection-cores">
+                    <img class='spacexelement-selection-button-img' src='img/coreicon.png' alt="core">
+                </button>
+                <button class="spacexelement-selection-button spacexelement-selection-landingpad">
+                    <img class='spacexelement-selection-button-img' src='img/landingpadicon.png' alt="landingpad">
+                </button>
+            </div>
+            
+            <div class="spacexelement-tableau">
+                <h1>Cliquer sur un élément pour avoir ses informations :</h1>
+                <div class="spacexelement-tableau-back">
+                    <button class='spacexelement-tableau-backbutton'>
+                        <p>Retour</p>
+                    </button>
+                </div>
+            </div>
+    
+            <div class='spacexelement-infos'>
+                <h1 class="spacexelement-info-title">Identity Card</h1>
+                <h2 class="spacexelement-info-name"></h2>
+    
+                <ul class="spacexelement-info-specs">
+                    <li class="spacexelement-info-spec info-spec-id">
+                        <img alt="icon" src="img/icon_id.png" class="icon spacexelement-info-spec-icon">
+                        <p class="spacexelement-info-spec-text spec-id"></p>
+                    </li>
+    
+                    <li class="spacexelement-info-spec info-spec-fullname">
+                        <img alt="icon" src="img/icon_id.png" class="icon spacexelement-info-spec-icon">
+                        <p class="spacexelement-info-spec-text spec-fullname"></p>
+                    </li>
+    
+                    <li class="spacexelement-info-spec info-spec-type">
+                        <img alt="icon" src="img/icon_type.png" class="icon spacexelement-info-spec-icon">
+                        <p class="spacexelement-info-spec-text spec-type"></p>
+                    </li>
+    
+                    <li class="spacexelement-info-spec info-spec-block">
+                        <img alt="icon" src="img/icon_block.png" class="icon spacexelement-info-spec-icon">
+                        <p class="spacexelement-info-spec-text spec-block"></p>
+                    </li>
+    
+                    <li class="spacexelement-info-spec info-spec-water">
+                        <img alt="icon" src="img/icon_water.png" class="icon spacexelement-info-spec-icon">
+                        <p class="spacexelement-info-spec-text spec-water"></p>
+                    </li>
+    
+                    <li class="spacexelement-info-spec info-spec-attempt">
+                        <img alt="icon" src="img/icon_launch.png" class="icon spacexelement-info-spec-icon">
+                        <p class="spacexelement-info-spec-text spec-attempt"></p>
+                    </li>
+    
+                    <li class="spacexelement-info-spec info-spec-success">
+                        <img alt="icon" src="img/icon_success.png" class="icon spacexelement-info-spec-icon">
+                        <p class="spacexelement-info-spec-text spec-success"></p>
+                    </li>
+    
+                    <li class="spacexelement-info-spec info-spec-detail">
+                        <img alt="icon" src="img/icon_detail.png" class="icon spacexelement-info-spec-icon">
+                        <p class="spacexelement-info-spec-text spec-detail"></p>
+                    </li>
+    
+                    <li class="spacexelement-info-spec info-spec-launch">
+                        <img alt="icon" src="img/icon_launch.png" class="icon spacexelement-info-spec-icon">
+                        <p class="spacexelement-info-spec-text spec-launch"></p>
+                    </li>
+    
+                    <li class="spacexelement-info-spec info-spec-reuse">
+                        <img alt="icon" src="img/icon_reuse.png" class="icon spacexelement-info-spec-icon">
+                        <p class="spacexelement-info-spec-text spec-reuse"></p>
+                    </li>
+    
+                    <li class="spacexelement-info-spec info-spec-location">
+                        <img alt="icon" src="img/icon_location.png" class="icon spacexelement-info-spec-icon">
+                        <p>Location :</p>
+                        <ul class="spec-locationlist">
+                            <li>
+                                <p class="spacexelement-info-spec-text spec-location-name"></p>
+                            </li>
+                            <li>
+                                <p class="spacexelement-info-spec-text spec-location-region"></p>
+                            </li>
+                            <li>
+                                <p class="spacexelement-info-spec-text spec-location-latitude"></p>
+                            </li>
+                            <li>
+                                <p class="spacexelement-info-spec-text spec-location-longitude"></p>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <li class="spacexelement-info-spec info-spec-status">
+                        <img alt="icon" src="img/icon_status.png" class="icon spacexelement-info-spec-icon">
+                        <p class="spacexelement-info-spec-text spec-status"></p>
+                    </li>
+    
+                    <li class="spacexelement-info-spec info-spec-wiki">
+                        <img alt="icon" src="img/icon_wiki.png" class="icon spacexelement-info-spec-icon">
+                        <a class="spacexelement-info-spec-text spec-wiki" href=""></a>
+                    </li>
+                </ul>
+    
+                <div class="spacexelement-info-img">
+                    <img  class="spacexelement-info-image" src="" alt="SpaceX-Element">
+                </div>
+    
+                <div class="spacexelement-info-back">
+                    <button class='spacexelement-info-backbutton'>
+                       <p>Retour</p>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="rocket" class="rocket">
+            <div class="rocket-build">
+                <div class="rocket-menu">
+                    <div class="rocket-build-item">
+                        <div class="rocket-build-item-selection">
+                            <button class="rocket-build-item-selection-capsule">
+                                <img class="icon-item" src="img/icon_capsule.png" alt="icon">
+                            </button>
+                            <button class="rocket-build-item-selection-core">
+                                <img class="icon-item" src="img/icon_core.png" alt="icon">
+                            </button>
+                            <button class="rocket-build-item-selection-booster">
+                                <img class="icon-item" src="img/icon_booster.png" alt="icon">
+                            </button>
+                        </div>
+                        <div class="rocket-build-item-tab">
+                            <button id="item-capsule1" class="item-capsule">
+                                <img class="item-image" src="img/capsule1.png" alt="capsule1">
+                            </button>
+                            <button id="item-capsule2" class="item-capsule">
+                                <img class="item-image" src="img/capsule2.png" alt="capsule2">
+                            </button>
+                            <button id="item-capsule3" class="item-capsule">
+                                <img class="item-image" src="img/capsule3.png" alt="capsule3">
+                            </button>
+                            <button id="item-capsule4" class="item-capsule">
+                                <img class="item-image" src="img/capsule4.png" alt="capsule4">
+                            </button>
+                            <button id="item-core1" class="item-core">
+                                <img class="item-image" src="img/core1.png" alt="core1">
+                            </button>
+                            <button id="item-core2" class="item-core">
+                                <img class="item-image" src="img/core2.png" alt="core2">
+                            </button>
+                            <button id="item-core3" class="item-core">
+                                <img class="item-image" src="img/core3.png" alt="core3">
+                            </button>
+                            <button id="item-booster1" class="item-booster">
+                                <img class="item-image" src="img/booster1.png" alt="booster1">
+                            </button>
+                            <button id="item-booster2" class="item-booster">
+                                <img class="item-image" src="img/booster2.png" alt="booster2">
+                            </button>
+                            <button id="item-booster3" class="item-booster">
+                                <img class="item-image" src="img/booster3.png" alt="booster3">
+                            </button>
+                            <button id="item-dualbooster1" class="item-dual-boosters">
+                                <img class="item-image" src="img/dualbooster1.png" alt="dualbooster1">
+                            </button>
+                            <button id="item-dualbooster2" class="item-dual-boosters">
+                                <img class="item-image" src="img/dualbooster2.png" alt="dualbooster2">
+                            </button>
+                            <button id="item-dualbooster3" class="item-dual-boosters">
+                                <img class="item-image" src="img/dualbooster3.png" alt="dualbooster3">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="rocket-build-menu">
+                        <button class="build-menu-button launch-button">
+                            <img class="icon build-menu-icon" src="img/icon_launch.png" alt="icon">
+                            <p>Décollage</p>
+                        </button>
+                        <button class="build-menu-button delete-button">
+                            <img class="icon build-menu-icon" src="img/icon_delete.png" alt="icon">
+                            <p>Tout supprimer</p>
+                        </button>
+
+                        <button class="build-menu-button solar-button">
+                            <img class="icon build-menu-icon" src="img/icon_solarsystem.png" alt="icon">
+                            <p>Systeme Solaire</p>
+                        </button>
+
+                        <button class="build-menu-button spacex-button">
+                            <img class="spacex-button-img" src="img/SpaceX-Logo.png" alt="SpaceX-Logo">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="rocket-build-assemblage">
+                </div>
+            </div>
+        </section>
+
+        <section id="solarsystem" class="solarsystem">
+            <section class="system">
+                <button id='btnaddplanetfromweb'></button>
+                <button id='btnsendplanettoweb'></button>
+
+                <section class="system-elements">
+                    <div id="Gemany-Stella" class="system-element star">
+                        <h2 class="system-element-title">Gemany-Stella</h2>
+                    </div>
+
+                    <div class="system-element-link"></div>
+
+                    <div id="Jalta-belt" class="system-element asteroid">
+                        <h2 class="system-element-title">Jalta-belt</h2>
+                    </div>
+
+                    <div class="system-element-link"></div>
+
+                    <div id="Galor" class="system-element planet-big">
+                        <div class="system-element-option">
+                            <div class="system-element-option-addsubplanet">
+                                <button class="system-element-option-button system-element-option-add"></button>
+                                <div class="submanagement-form">
+                                    <input class="management-form-input management-subplanet-name" type="text" placeholder="Name your subplanet">
+                                    <button class="management-form-input management-subplanet-create">Create Subplanet</button>
+                                </div>
+                            </div>
+                            <button class="system-element-option-button system-element-option-remove"></button>
+                        </div>
+                        <h2 class="system-element-title">Galor</h2>
+                        <div id="Galor-subplanets" class="subplanets">
+                            <div class="system-element-subplanet-link"></div>
+                            <div id="Galormoon1" class="system-element moon">
+                                <h4>Galormoon1</h4>
+                                <div class="system-element-option">
+                                    <button class="system-element-option-button system-element-option-remove"></button>
+                                </div>
+                            </div>
+                            <div class="system-element-subplanet-link"></div>
+                            <div id="Galormoon2" class="system-element moon">
+                                <h4>Galormoon2</h4>
+                                <div class="system-element-option">
+                                    <button class="system-element-option-button system-element-option-remove"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="system-element-link"></div>
+
+                    <div class="system-element planet-small">
+                        <h2 class="system-element-title">Pytha-1</h2>
+                    </div>
+
+                    <div class="system-element-link"></div>
+
+                    <div class="system-element planet-medium">
+                        <h2 class="system-element-title">Pytha-2</h2>
+                        <div class="subplanets">
+                            <div class="system-element-subplanet-link"></div>
+                            <div class="system-element station"></div>
+                        </div>
+                    </div>
+                </section>
+                
+                <selection class="management">
+                    <div class="management-form">
+                        <input id="management-planet-name" class="management-form-input" type="text" placeholder="Name your planet">
+                        <select id="management-planet-size" class="management-form-input">
+                            <option value="big">Big</option>
+                            <option value="medium">Medium</option>
+                            <option value="small">Small</option>
+                        </select>
+
+                        <button id="management-planet-create" class="management-form-input">Create planet</button>
+                    </div>
+                    <button class="management-add">+</button>
+                </selection>
+
+                <button class="solarsystem-backbutton">
+                    <p>retour</p>
+                </button>
+            </section>
+
+            <section id="Gemany-Stella-section" class="element-section">
+                <div class="element-infos">
+                    <h2 class="element-name">Gemany-Stella</h2>
+                    <p class="element-description">Gemany-Stella is the star of Gemany-Stella system. Its common name is Gemany. Located in the Orion sector of the Milky-Way</p>
+
+                    <ul class="element-specs">
+                        <li class="element-spec">
+                            <img alt="icon" src="img/icon_equator.png" class="element-spec-icon">
+                            <p class="element-spec-text">Equatorial diameter : 60762075 Km</p>
+                        </li>
+
+                        <li class="element-spec">
+                            <img alt="icon" src="img/icon_termometer.png" class="element-spec-icon">
+                            <p class="element-spec-text">Average temperature : 3000C°</p>
+                        </li>
+
+                        <li class="element-spec">
+                            <img alt="icon" src="img/icon_composition.png" class="element-spec-icon">
+                            <p class="element-spec-text">Main composition : Fusionned plasma</p>
+                        </li>
+
+                        <li class="element-spec">
+                            <img alt="icon" src="img/icon_distance.png" class="element-spec-icon">
+                            <p class="element-spec-text">Distance to Earth :  2745.65LY</p>
+                        </li>
+                    </ul>
+
+                    <div class="element-img">
+                        <img id="gemany-stella-img" src="img/sun.png" alt="gemany-stella">
+                    </div>
+
+                    <div class="back-system">
+                        <div class="arrow"><img alt="icon" src="img/icon_solarsystem.png" class="arrow-icon"></div>
+                        <p>System Map</p>
+                    </div>
+                </div>
+                <button class="solarsystem-launchbutton">
+                    <p>GO !</p>
+                </button>
+            </section>
+
+
+            <section id="Galor-section" class="element-section">
+                <div class="element-infos">
+                    <h2 class="element-name">Galor</h2>
+                    <p class="element-description">Galor is the first planet of Gemany System. Discover in 3037 by Pruce Gohan, the planet became the first colonised planet of Gemany with Newbell-city</p>
+
+                    <ul class="element-specs">
+                        <li class="element-spec">
+                            <img alt="icon" src="img/icon_equator.png" class="element-spec-icon">
+                            <p class="element-spec-text">Equatorial diameter : 150027 Km</p>
+                        </li>
+
+                        <li class="element-spec">
+                            <img alt="icon" src="img/icon_termometer.png" class="element-spec-icon">
+                            <p class="element-spec-text">Average temperature : 62C°</p>
+                        </li>
+
+                        <li class="element-spec">
+                            <img alt="icon" src="img/icon_composition.png" class="element-spec-icon">
+                            <p class="element-spec-text">Main composition : Water 68%, Rock 12%, Earth 15%, Ice 5%</p>
+                        </li>
+
+                        <li class="element-spec">
+                            <img alt="icon" src="img/icon_distance.png" class="element-spec-icon">
+                            <p class="element-spec-text">Distance to Earth :  2745.68LY</p>
+                        </li>
+                    </ul>
+
+                    <div class="element-img">
+                        <img id="galor-img" src="img/planet2.png" alt="galor">
+                    </div>
+
+                    <div class="back-system">
+                        <div class="arrow"><img alt="icon" src="img/icon_solarsystem.png" class="arrow-icon"></div>
+                        <p>System Map</p>
+                    </div>
+                </div>
+
+                <button class="solarsystem-launchbutton">
+                    <p>GO !</p>
+                </button>
+            </section>
+
+            <section id="Galormoon1-section" class="element-section">
+                <div class="element-infos">
+                    <h2 class="element-name">Galormoon1</h2>
+                    <p class="element-description">Galor is the first planet of Gemany System. Discover in 3037 by Pruce Gohan, the planet became the first colonised planet of Gemany with Newbell-city</p>
+
+                    <ul class="element-specs">
+                        <li class="element-spec">
+                            <img alt="icon" src="img/icon_equator.png" class="element-spec-icon">
+                            <p class="element-spec-text">Equatorial diameter : 5027 Km</p>
+                        </li>
+
+                        <li class="element-spec">
+                            <img alt="icon" src="img/icon_termometer.png" class="element-spec-icon">
+                            <p class="element-spec-text">Average temperature : -20C°</p>
+                        </li>
+
+                        <li class="element-spec">
+                            <img alt="icon" src="img/icon_composition.png" class="element-spec-icon">
+                            <p class="element-spec-text">Main composition : Rock 90%, Ice 10%</p>
+                        </li>
+
+                        <li class="element-spec">
+                            <img alt="icon" src="img/icon_distance.png" class="element-spec-icon">
+                            <p class="element-spec-text">Distance to Earth :  2745.68LY</p>
+                        </li>
+                    </ul>
+
+                    <div class="element-img">
+                        <img id="galor-img" src="img/moon.png" alt="galormoon1">
+                    </div>
+
+                    <div class="back-system">
+                        <div class="arrow"><img alt="icon" src="img/icon_solarsystem.png" class="arrow-icon"></div>
+                        <p>System Map</p>
+                    </div>
+                </div>
+
+                <button class="solarsystem-launchbutton">
+                    <p>GO !</p>
+                </button>
+            </section>
+        </section>
+
+        <section id="launch" class="launch">
+            <div class="launch-travel">
+                <h1 class="start-name">Terre</h1>
+                <div class="start">
+                    <img class="start-img" src="img/planet.png" alt="Terre">
+                </div>
+                <div class="void">
+                    <div class="spaceship"></div>
+                </div>
+                <h1 class="end-name"></h1>
+                <div class="end">
+                    <img class="end-img" src="" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section id="congratulation" class="congratulation">
+            <div class="spaceship-arrival"></div>
+            <div class="planet-arrival">
+                <img class="planet-arrival-img" src="" alt="">
+            </div>
+            <button class="backtomenu-button">
+                <p>Retour au menu</p>
+            </button>
+        </section>
+
+        <script src="main.js"></script>
+    </body>
+</html>
